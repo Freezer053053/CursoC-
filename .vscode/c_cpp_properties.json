@@ -3,7 +3,8 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:/SDL2/include" // Aquí añades la ruta a la carpeta 'include' de SDL2
             ],
             "defines": [
                 "_DEBUG",

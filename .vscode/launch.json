@@ -1,8 +1,29 @@
 {
+    "version": "2.0.0",
     "configurations": [
-        
         {
-            "name": "C/C++: gcc.exe Compilar y depurar el archivo activo",
+            "name": "Build with SDL2",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/ventana.exe", // Aquí apuntas a tu ejecutable creado
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\w64devkit\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build with SDL2"
+        },
+        {
+            "name": "C/C++: gcc.exe Compile and Debug active file",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -15,20 +36,20 @@
             "miDebuggerPath": "gdb.exe",
             "setupCommands": [
                 {
-                    "description": "Habilitar la impresión con sangría para gdb",
+                    "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 },
                 {
-                    "description": "Establecer tipo de desensamblado en Intel",
+                    "description": "Set disassembly flavor to Intel",
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: gcc.exe compilar archivo activo"
+            "preLaunchTask": "C/C++: gcc.exe compile the active file"
         },
         {
-            "name": "C/C++: g++.exe Compilar y depurar el archivo activo",
+            "name": "C/C++: g++.exe Compile and Debug active file",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -41,18 +62,17 @@
             "miDebuggerPath": "C:\\w64devkit\\bin\\gdb.exe",
             "setupCommands": [
                 {
-                    "description": "Habilitar la impresión con sangría para gdb",
+                    "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 },
                 {
-                    "description": "Establecer tipo de desensamblado en Intel",
+                    "description": "Set disassembly flavor to Intel",
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++.exe compilar archivo activo"
+            "preLaunchTask": "C/C++: g++.exe compile the active file"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }

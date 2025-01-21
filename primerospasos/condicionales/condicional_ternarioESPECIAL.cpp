@@ -9,7 +9,7 @@ int main(){
 
     cin>>num;
 
-    if(num%2 == 0){
+/*    if(num%2 == 0){
 
         cout<<"Es un numero par"<<endl;
 
@@ -18,4 +18,7 @@ int main(){
 
         cout<<"Es un numero impar"<<endl;
     }
+*/
+
+    cout<<"El numero es "<<((num%2==0)?"par": "impar")<<endl;
 }

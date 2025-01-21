@@ -1,4 +1,4 @@
-// Introduce 5 números en un array y estos deven ordenarse.ç
+// Introduce 5 números en un array y estos deven ordenarse.
 
 #include <iostream>
 using namespace std;
@@ -19,7 +19,7 @@ int main(){
 
     int numerosOrdenados [5];
 
-    for (int i=0; i<5; i++){
+    for(int i=0; i<5; i++){
 
         numerosOrdenados[i]=numeros[i];
 

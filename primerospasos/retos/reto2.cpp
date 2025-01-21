@@ -30,12 +30,18 @@ int main(){
         for(int j=0; j<4; j++){
 
             if(numerosOrdenados[j]>numerosOrdenados[j+1]) {
+             // Ej: j=(5), j+1=(2)
                 
-                numerosOrdenados[j]=numerosOrdenados[j]+numerosOrdenados[j+1];
+                numerosOrdenados[j]=numerosOrdenados[j]+numerosOrdenados[j+1];  
+                //  j(5) = j(5)+j+1(2)----->j=(7)
 
                 numerosOrdenados[j+1]=numerosOrdenados[j]-numerosOrdenados[j+1];
+                //  j+1(2) = j(7)-j+1(2)----->j+1=(5)
 
                 numerosOrdenados[j]=numerosOrdenados[j]-numerosOrdenados[j+1];
+                //  j(7) = j(7)-j+1(5)----->j=(2)
+
+                //Así intercambioamos los valores
 
             }
 

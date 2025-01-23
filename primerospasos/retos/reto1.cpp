@@ -79,6 +79,6 @@ int main(){
         cout<<numero<<" no es divisible entre 7"<<endl;
     }
 
-    delay(20000);
+    //delay(20000);
 
 }

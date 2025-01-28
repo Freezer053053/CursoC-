@@ -19,7 +19,7 @@ int main(){
 
         if(examen=="Si" || "si"){
 
-        cout<<"Eres mayor de edad y superaste el examen, puedes sacarte el carnet de conducir."<<endl;
+            cout<<"Eres mayor de edad y superaste el examen, puedes sacarte el carnet de conducir."<<endl;
         
         }
 

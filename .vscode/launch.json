@@ -1,65 +1,20 @@
 {
     "version": "2.0.0",
     "configurations": [
-        {
-            "name": "Build with SDL2",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/ventana.exe", // Aquí apuntas a tu ejecutable creado
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "miDebuggerPath": "C:\\w64devkit\\bin\\gdb.exe",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "Build with SDL2"
-        },
-        {
-            "name": "C/C++: gcc.exe Compile and Debug active file",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "C:/w64devkit/bin",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "miDebuggerPath": "gdb.exe",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "Set disassembly flavor to Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "C/C++: gcc.exe compile the active file"
-        },
+        
+
         {
             "name": "C/C++: g++.exe Compile and Debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",  // Cambiado a barras normales
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:\\w64devkit\\bin\\gdb.exe",
+            "miDebuggerPath": "C:/w64devkit/bin/gdb.exe",  // Cambiado a barras normales
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -72,7 +27,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++.exe compile the active file"
+            "preLaunchTask": "C/C++: g++.exe compilar archivo activo"  // Cambiado a coincidir con tasks.json
         }
     ]
 }

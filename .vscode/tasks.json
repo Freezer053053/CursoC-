@@ -14,7 +14,7 @@
                 "-o",
                 "${workspaceFolder}/ventana.exe",
                 "-lSDL2",                  // Enlazando librería SDL2
-                "-mwindows"               // Definiendo subsistema para aplicaciones GUI
+                "-mwindows"                // Definiendo subsistema para aplicaciones GUI
             ],
             "options": {
                 "cwd": "${workspaceFolder}"   // Asegurando el directorio de trabajo correcto
@@ -24,20 +24,20 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false            // Cambio aquí para que no sea la tarea predeterminada
             },
             "detail": "Tarea modificada para compilar con SDL2."
         },
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe compilar archivo activo",
-            "command": "C:\\w64devkit\\bin\\g++.exe",
+            "command": "C:/w64devkit/bin/g++.exe",     // Utiliza barras normales en lugar de barras invertidas
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}/${fileBasenameNoExtension}.exe"  // Utiliza barras normales en lugar de barras invertidas
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -45,29 +45,32 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "detail": "Tarea generada por el depurador."
         },
         {
             "type": "cppbuild",
             "label": "C/C++: gcc.exe compilar archivo activo",
-            "command": "C:/w64devkit/bin/gcc.exe",
+            "command": "C:/w64devkit/bin/gcc.exe",    // Utiliza barras normales en lugar de barras invertidas
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}/${fileBasenameNoExtension}.exe"  // Utiliza barras normales en lugar de barras invertidas
             ],
             "options": {
-                "cwd": "C:/w64devkit/bin"
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false            // Cambio aquí para que no sea la tarea predeterminada
             },
             "detail": "Tarea generada por el depurador."
         }

@@ -13,6 +13,17 @@ class Coche{
 
     //Metodos/comportamientos
 
+    public:
+    void setPrecio(double p){
+
+        precio=p;
+    }
+
+    double getPrecio(){
+
+        return precio;
+    }
+
     void arrancar(){
 
         cout<<"Coche arrancado"<<endl;
@@ -51,6 +62,20 @@ int main(){
 
     Coche coche_Juan;
 
+    //  Crear punteros a objetos
+
+    Coche* ptrCocheMaria= &coche_Maria;
+    Coche* ptrCocheJuan= &coche_Juan;
+
+    // Usar el puntero para acceder a los metodos de objeto coche_Juan
+
+    ptrCocheJuan->setPrecio(30000);
+
+    cout<<"El precio es: "<<ptrCocheJuan->getPrecio()<<endl;
+
+    //  Usando el puntero para acceder a metodos de cocheMaria
+
+    ptrCocheMaria->acelerar();
 
     return 0;
     

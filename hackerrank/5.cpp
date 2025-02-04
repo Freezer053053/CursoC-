@@ -23,15 +23,12 @@
 
 using namespace std;
 
+
 bool esPar(int num){
-    if(num%2==0){
-        return true;
-    }
-    else{
-        return false;
-    }
-    
+    return num%2==0?true:false;
 }
+    
+
 
 int main() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */

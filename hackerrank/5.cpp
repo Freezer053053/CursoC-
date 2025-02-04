@@ -23,9 +23,8 @@
 
 using namespace std;
 
-
 bool esPar(int num){
-    return num%2==0?true:false;
+    return num%2==0;
 }
     
 

@@ -2,7 +2,7 @@
 using namespace std;
 
 class MiClase {
-    private:
+    protected:
         int edad; // Miembro privado
 
     public:
@@ -15,16 +15,24 @@ class MiClase {
             }
         }
 
-        void getMostrar() {
-            cout << "Valor de edad: " << edad << endl;
-        }
+        
+};
+
+class Derivada:public MiClase{
+
+public:
+
+    void getMostrar() {
+        cout << "Valor de edad: " << edad << endl;
+    }
+
 };
 
 int main(){
 
-    MiClase obj;
+    Derivada obj;
 
     obj.setValor(35);
 
-    obj.setMostrar(); //Accediendo a metodo publico
+    obj.getMostrar(); //Accediendo a metodo publico
 }

@@ -7,10 +7,10 @@ int main(){
 
     int edades[personas]{12,34,45,35};
 
-    cout << edades[7] << endl;
+    cout << edades[2] << endl;
 
-    edades[7] = 45; 
+    edades[4] = 65; 
 
-    cout << edades[7] << endl;
+    cout << edades[4] << endl;
   
 }

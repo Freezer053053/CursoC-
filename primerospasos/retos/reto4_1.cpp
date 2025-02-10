@@ -36,7 +36,8 @@ void invertirArray(int array[], int tamano){
 
 int main(){
 
-    const int tamano=5;
+    int tamano;
+    cin>>tamano;
     int array[tamano];
 
     cout<<"Introduce 5 valores:"<<endl;
